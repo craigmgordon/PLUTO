@@ -6,7 +6,6 @@ resource "google_storage_bucket" "tfstate" {
 }
 terraform {
     backend "local" {
-    bucket  = "roimb-devops-7-dev-state"
-    prefix  = "terraform/state/terraform.tfstate"
+        path  = "terraform/state/terraform.tfstate"
     }
 }
