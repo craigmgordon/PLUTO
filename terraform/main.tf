@@ -5,7 +5,8 @@ resource "google_storage_bucket" "tfstate" {
     uniform_bucket_level_access = true
 }
 terraform {
-    backend "local" {
-        path  = "terraform/state/terraform.tfstate"
+    backend "gcs" {
+        bucket = "${var.project_id}-state"
+        prefix  = "terraform/state"
     }
 }
