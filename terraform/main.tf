@@ -6,7 +6,7 @@ resource "google_storage_bucket" "tfstate" {
 }
 terraform {
     backend "gcs" {
-        bucket = roimb-devops-7-dev-state
+        bucket = "roimb-devops-7-dev-state"
         prefix  = "terraform/state"
     }
 }
