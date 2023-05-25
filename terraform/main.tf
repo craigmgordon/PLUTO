@@ -10,6 +10,3 @@ terraform {
         prefix  = "terraform/state"
     }
 }
-module "bucket" {
-  source = "./bucket"
-}
